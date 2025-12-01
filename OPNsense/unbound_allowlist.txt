@@ -1,0 +1,31 @@
+# === 系统与云服务 ===
+metrics.icloud.com
+paydns.wechatpay.cn
+westus-0.in.applicationinsights.azure.com
+office365.com
+outlook.office.com
+mobile.events.data.microsoft.com
+
+# === 公共 DNS 服务 ===
+dns.google
+1dot1dot1dot1.cloudflare-dns.com
+cloudflare-dns.com
+dns.alidns.com
+
+# === 网络工具 / VPN ===
+controlplane.tailscale.com
+log.tailscale.com
+tailscale.com
+*.tailscale.com
+
+# === 开发者 / 代码托管 ===
+github.com
+collector.github.com
+*.github.com
+
+# === 常用互联网服务 ===
+api.ipify.org
+www.baidu.com
+baidu.com
+*.baidu.com
+*.planeteditorx.dpdns.org
