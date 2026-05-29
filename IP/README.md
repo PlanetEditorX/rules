@@ -1,5 +1,5 @@
 # china_ip_list
-每天零点自动更新
+每2天零点自动更新
 
 纯真库: https://raw.githubusercontent.com/metowolf/iplist/master/data/special/china.txt
 
