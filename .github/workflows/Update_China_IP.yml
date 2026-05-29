@@ -38,6 +38,12 @@ jobs:
 
     - name: Commit and Push
       run: |
+        # 检查是否有变更
+        if git diff --quiet IP/china_ip_list.txt; then
+          echo "No changes to commit"
+          exit 0
+        fi
+
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "💋" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
         git add IP/china_ip_list.txt
         git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} Sync China IP list $(date +%Y-%m-%d" "%H:%M:%S)"
