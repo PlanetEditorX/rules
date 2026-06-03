@@ -33,6 +33,7 @@ jobs:
       # 3. 保存用户输入
       - name: Save Inputs
         working-directory: Apple/DNS
+        shell: bash
         run: |
           if [ -n "${{ github.event.inputs.json }}" ]; then
             echo '${{ github.event.inputs.json }}' > input.json
@@ -51,35 +52,44 @@ jobs:
         working-directory: Apple/DNS
         run: python scripts/generate.py
 
-      # 5. 提交更新到仓库
+      # 5. 统一发布文件名
+      - name: Rename Asset
+        working-directory: Apple/DNS
+        run: |
+          cp output/dns.mobileconfig output/apple-dns.mobileconfig
+
+      # 6. 提交更新到仓库
       - name: Commit Files
         working-directory: Apple/DNS
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          git add data/ad_domains.txt output/dns.mobileconfig
+          git add data/ad_domains.txt
+          git add output/dns.mobileconfig
+          git add output/apple-dns.mobileconfig
 
-          git commit -m "Auto update DNS profile" || echo "No changes"
+          git commit -m "Auto update Apple DNS profile" || echo "No changes"
 
           git push
 
-      # 6. 删除旧 latest tag
-      - name: Delete old latest tag
-        run: |
-          git tag -d latest || true
-          git push origin :refs/tags/latest || true
+      # 7. 删除旧 Tag
+      - name: Delete old tag
         continue-on-error: true
+        run: |
+          git tag -d apple-dns-latest || true
+          git push origin :refs/tags/apple-dns-latest || true
 
-      # 7. 创建 latest tag
+      # 8. 创建新 Tag
       - name: Create latest tag
         run: |
-          git tag latest
-          git push origin latest --force
+          git tag apple-dns-latest
+          git push origin apple-dns-latest --force
 
-      # 8. 上传 Release
+      # 9. 上传 Release
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest
-          files: Apple/DNS/output/dns.mobileconfig
+          tag_name: apple-dns-latest
+          name: Apple DNS Profile
+          files: Apple/DNS/output/apple-dns.mobileconfig
