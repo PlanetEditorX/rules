@@ -172,3 +172,5 @@ umeng.com
 union.163.com
 union.360.cn
 union.baidu.com
+union.sogou.com
+union.sohu.com
