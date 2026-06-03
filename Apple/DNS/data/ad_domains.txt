@@ -170,3 +170,5 @@ tracking.intl.miui.com
 tsis-ipv6.jpush.cn
 umeng.com
 union.163.com
+union.360.cn
+union.baidu.com
