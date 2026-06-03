@@ -168,3 +168,5 @@ tpstelemetry.tencent.com
 tracker.ai.xiaomi.com
 tracking.intl.miui.com
 tsis-ipv6.jpush.cn
+umeng.com
+union.163.com
