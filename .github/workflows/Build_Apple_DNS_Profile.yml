@@ -80,9 +80,17 @@ jobs:
           git push origin apple-dns-latest --force
 
       # 8. 上传 Release
+      - name: Generate Release Name
+        run: |
+          Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "💋" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
+          RANDOM_EMOJI=${Emoji[$RANDOM % ${#Emoji[@]}]}
+          RELEASE_NAME="$RANDOM_EMOJI Apple DNS Profile $(date '+%Y-%m-%d %H:%M:%S')"
+
+          echo "RELEASE_NAME=$RELEASE_NAME" >> $GITHUB_ENV
+
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: apple-dns-latest
-          name: Apple DNS Profile
+          name: ${{ env.RELEASE_NAME }}
           files: Apple/DNS/output/dns.mobileconfig
