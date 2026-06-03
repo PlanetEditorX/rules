@@ -167,3 +167,4 @@ toblog.volceapplog.com
 tpstelemetry.tencent.com
 tracker.ai.xiaomi.com
 tracking.intl.miui.com
+tsis-ipv6.jpush.cn
