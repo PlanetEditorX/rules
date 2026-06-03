@@ -197,24 +197,10 @@
                     <string>tpstelemetry.tencent.com</string>
                     <string>tracker.ai.xiaomi.com</string>
                     <string>tracking.intl.miui.com</string>
-                    <string>tsis-ipv6.jpush.cn</string>
-                    <string>umeng.com</string>
-                    <string>union.163.com</string>
-                    <string>union.360.cn</string>
-                    <string>union.baidu.com</string>
-                    <string>union.sogou.com</string>
-                    <string>union.sohu.com</string>
-                    <string>unityads.unity3d.com</string>
-                    <string>upc.zztfly.com</string>
                     <string>updates.cdn-apple.com</string>
-                    <string>utoken.umeng.com</string>
                     <string>valid.apple.com</string>
                     <string>vpp.itunes.apple.com</string>
-                    <string>www.callmekeji.com</string>
-                    <string>www.pangolin-dsp-toutiao.com</string>
                     <string>xp.apple.com</string>
-                    <string>yumao.puata.info</string>
-                    <string>yximgs.com</string>
                 </array>
                 <key>SupplementalMatchDomainsNoSearch</key>
                 <true/>

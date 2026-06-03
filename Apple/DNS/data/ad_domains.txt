@@ -165,3 +165,5 @@ tobapplog.volceapplog.com
 toblog.ctobsnssdk.com
 toblog.volceapplog.com
 tpstelemetry.tencent.com
+tracker.ai.xiaomi.com
+tracking.intl.miui.com
