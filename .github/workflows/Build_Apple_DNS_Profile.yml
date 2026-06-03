@@ -52,13 +52,7 @@ jobs:
         working-directory: Apple/DNS
         run: python scripts/generate.py
 
-      # 5. 统一发布文件名
-      - name: Rename Asset
-        working-directory: Apple/DNS
-        run: |
-          cp output/dns.mobileconfig output/apple-dns.mobileconfig
-
-      # 6. 提交更新到仓库
+      # 5. 提交更新到仓库
       - name: Commit Files
         working-directory: Apple/DNS
         run: |
@@ -67,29 +61,28 @@ jobs:
 
           git add data/ad_domains.txt
           git add output/dns.mobileconfig
-          git add output/apple-dns.mobileconfig
 
           git commit -m "Auto update Apple DNS profile" || echo "No changes"
 
           git push
 
-      # 7. 删除旧 Tag
+      # 6. 删除旧 Tag
       - name: Delete old tag
         continue-on-error: true
         run: |
           git tag -d apple-dns-latest || true
           git push origin :refs/tags/apple-dns-latest || true
 
-      # 8. 创建新 Tag
+      # 7. 创建新 Tag
       - name: Create latest tag
         run: |
           git tag apple-dns-latest
           git push origin apple-dns-latest --force
 
-      # 9. 上传 Release
+      # 8. 上传 Release
       - name: Upload Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: apple-dns-latest
           name: Apple DNS Profile
-          files: Apple/DNS/output/apple-dns.mobileconfig
+          files: Apple/DNS/output/dns.mobileconfig
