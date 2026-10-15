@@ -1,4 +1,5 @@
 3ad01dfa4.sched.d0.tdnsdp1.cn
+ad.toutiao.com
 adash.man.aliyuncs.com
 adashbc.ut.taobao.com
 adashx.m.taobao.com.w.kunlunhuf.com
@@ -40,6 +41,7 @@ bdstatic.com
 beacon-api.aliyuncs.com
 beacon.cdn.qq.com
 beacon.qq.com
+byteimg.com
 bz-ipdx.baidu.com
 c-hzgt2.getui.com
 c-oneid.getui.net
@@ -123,6 +125,7 @@ pagead2.googlesyndication.com
 pangle-global.com
 pangle.cn
 pangleglobal.com
+pangolin-sdk-toutiao.com
 polaris5-normal-lf.zijieapi.com
 pro.bugly.qq.com
 pv.sohu.com

@@ -14,6 +14,7 @@
                 <key>SupplementalMatchDomains</key>
                 <array>
                     <string>3ad01dfa4.sched.d0.tdnsdp1.cn</string>
+                    <string>ad.toutiao.com</string>
                     <string>adash.man.aliyuncs.com</string>
                     <string>adashbc.ut.taobao.com</string>
                     <string>adashx.m.taobao.com.w.kunlunhuf.com</string>
@@ -59,6 +60,7 @@
                     <string>beacon.cdn.qq.com</string>
                     <string>beacon.qq.com</string>
                     <string>beta.apple.com</string>
+                    <string>byteimg.com</string>
                     <string>bz-ipdx.baidu.com</string>
                     <string>c-hzgt2.getui.com</string>
                     <string>c-oneid.getui.net</string>
@@ -152,6 +154,7 @@
                     <string>pangle-global.com</string>
                     <string>pangle.cn</string>
                     <string>pangleglobal.com</string>
+                    <string>pangolin-sdk-toutiao.com</string>
                     <string>polaris5-normal-lf.zijieapi.com</string>
                     <string>pro.bugly.qq.com</string>
                     <string>pv.sohu.com</string>
