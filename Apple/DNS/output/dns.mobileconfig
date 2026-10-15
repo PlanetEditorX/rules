@@ -215,6 +215,7 @@
                     <string>xp.apple.com</string>
                     <string>yumao.puata.info</string>
                     <string>yximgs.com</string>
+                    <string>zijieapi.com</string>
                 </array>
                 <key>SupplementalMatchDomainsNoSearch</key>
                 <true/>
